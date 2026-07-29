@@ -343,43 +343,43 @@ if predict_btn:
     # Save Prediction to SQLite
     # --------------------------------------------------
 
-    prediction_id = save_prediction(
+    # prediction_id = save_prediction(
 
-        age,
+    #     age,
 
-        income,
+    #     income,
 
-        loan_amount,
+    #     loan_amount,
 
-        credit_score,
+    #     credit_score,
 
-        probability,
+    #     probability,
 
-        risk_level
+    #     risk_level
 
-    )
+    # )
 
     # --------------------------------------------------
     # Generate TXT Report
     # --------------------------------------------------
 
-    report_path = generate_report(
+    # report_path = generate_report(
 
-        prediction_id,
+    #     prediction_id,
 
-        age,
+    #     age,
 
-        income,
+    #     income,
 
-        loan_amount,
+    #     loan_amount,
 
-        credit_score,
+    #     credit_score,
 
-        probability,
+    #     probability,
 
-        risk_level
+    #     risk_level
 
-    )
+    # )
 
     st.divider()
 
@@ -505,20 +505,20 @@ if predict_btn:
     # Download Report
     # --------------------------------------------------
 
-    with open(report_path, "rb") as pdf:
+    # with open(report_path, "rb") as pdf:
     
-        st.download_button(
+    #     st.download_button(
     
-            label="📄 Download PDF Report",
+    #         label="📄 Download PDF Report",
     
-            data=pdf,
+    #         data=pdf,
     
-            file_name=f"{prediction_id}.pdf",
+    #         file_name=f"{prediction_id}.pdf",
     
-            mime="application/pdf",
+    #         mime="application/pdf",
     
-            use_container_width=True
-    )
+    #         use_container_width=True
+    # )
 
     st.success("Prediction saved successfully")
 
