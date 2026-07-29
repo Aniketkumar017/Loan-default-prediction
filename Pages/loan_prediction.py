@@ -271,8 +271,6 @@ if predict_btn:
         probability = model.predict_proba(input_df)[0][1]
 
         st.success("Prediction Successful!")
-        st.write(prediction)
-        st.write(probability)
 
     except Exception as e:
         st.exception(e)
