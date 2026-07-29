@@ -4,5 +4,6 @@ numpy==2.3.2
 scikit-learn==1.7.2
 plotly==6.3.0
 reportlab==4.4.3
-matplotlib
-seaborn
+matplotlib==3.10.5
+seaborn==0.13.2
+joblib==1.5.1
