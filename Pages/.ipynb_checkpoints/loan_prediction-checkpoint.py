@@ -343,43 +343,39 @@ if predict_btn:
     # Save Prediction to SQLite
     # --------------------------------------------------
 
-    # prediction_id = save_prediction(
-
-    #     age,
-
-    #     income,
-
-    #     loan_amount,
-
-    #     credit_score,
-
-    #     probability,
-
-    #     risk_level
-
-    # )
+    try:
+        prediction_id = save_prediction(
+            age,
+            income,
+            loan_amount,
+            credit_score,
+            probability,
+            risk_level
+        )
+        st.success(f"Saved successfully: {prediction_id}")
+    
+    except Exception as e:
+        st.exception(e)
+        st.stop()
 
     # --------------------------------------------------
     # Generate TXT Report
     # --------------------------------------------------
-
-    # report_path = generate_report(
-
-    #     prediction_id,
-
-    #     age,
-
-    #     income,
-
-    #     loan_amount,
-
-    #     credit_score,
-
-    #     probability,
-
-    #     risk_level
-
-    # )
+    try:
+        report_path = generate_report(
+            prediction_id,
+            age,
+            income,
+            loan_amount,
+            credit_score,
+            probability,
+            risk_level
+        )
+        st.success("Report generated successfully")
+    
+    except Exception as e:
+        st.exception(e)
+        st.stop()
 
     st.divider()
 
@@ -414,11 +410,8 @@ if predict_btn:
     with c3:
 
         st.metric(
-
             "Prediction ID",
-
             prediction_id
-
         )
 
 
@@ -505,20 +498,20 @@ if predict_btn:
     # Download Report
     # --------------------------------------------------
 
-    # with open(report_path, "rb") as pdf:
+    with open(report_path, "rb") as pdf:
     
-    #     st.download_button(
+        st.download_button(
     
-    #         label="📄 Download PDF Report",
+            label="📄 Download PDF Report",
     
-    #         data=pdf,
+            data=pdf,
     
-    #         file_name=f"{prediction_id}.pdf",
+            file_name=f"{prediction_id}.pdf",
     
-    #         mime="application/pdf",
+            mime="application/pdf",
     
-    #         use_container_width=True
-    # )
+            use_container_width=True
+    )
 
     st.success("Prediction saved successfully")
 
