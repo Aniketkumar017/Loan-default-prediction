@@ -1,6 +1,6 @@
-streamlit==<tumhara_local_version>
-pandas==<tumhara_local_version>
-numpy==<tumhara_local_version>
-scikit-learn==<tumhara_local_version>
-plotly==<tumhara_local_version>
-reportlab==<tumhara_local_version>
+streamlit==1.48.0
+pandas==2.3.1
+numpy==2.3.2
+scikit-learn==1.7.2
+plotly==6.3.0
+reportlab==4.4.3
