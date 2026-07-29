@@ -1,6 +1,6 @@
-streamlit
-pandas
-numpy
-scikit-learn
-plotly
-reportlab
+streamlit==<tumhara_local_version>
+pandas==<tumhara_local_version>
+numpy==<tumhara_local_version>
+scikit-learn==<tumhara_local_version>
+plotly==<tumhara_local_version>
+reportlab==<tumhara_local_version>

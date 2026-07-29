@@ -270,11 +270,18 @@ if predict_btn:
         prediction = model.predict(input_df)[0]
         probability = model.predict_proba(input_df)[0][1]
 
-        st.success("Prediction successful!")
+        st.success("Prediction Successful!")
+        st.write(prediction)
+        st.write(probability)
+
+        # TEMPORARILY COMMENT THESE
+        # prediction_id = save_prediction(...)
+        # report_path = generate_report(...)
+        # st.download_button(...)
+        # baaki saara code bhi comment kar do
 
     except Exception as e:
         st.exception(e)
-        st.stop()
 
     # -----------------------------------------
     # Risk Analysis
