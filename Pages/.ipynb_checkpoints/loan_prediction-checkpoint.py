@@ -266,9 +266,15 @@ predict_btn = st.button(
 # --------------------------------------------------
 
 if predict_btn:
+    try:
+        prediction = model.predict(input_df)[0]
+        probability = model.predict_proba(input_df)[0][1]
 
-    prediction = model.predict(input_df)[0]
-    probability = model.predict_proba(input_df)[0][1]
+        st.success("Prediction successful!")
+
+    except Exception as e:
+        st.exception(e)
+        st.stop()
 
     # -----------------------------------------
     # Risk Analysis
